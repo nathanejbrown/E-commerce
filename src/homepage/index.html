@@ -2,9 +2,101 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Homepage</title>
+    <link rel="stylesheet" href="main.css" charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   </head>
   <body>
-
+    <div class="container">
+      <header>
+          <div class="navbar navbar-static-top">
+            <div class="navigation">
+              <nav class="col-md-10">
+                <ul class="nav topnav bold">
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">Home</a>
+                    <ul style="display: toggle;" class="dropdown-menu bold">
+                       <li><a href="http://www.espn.com">Homepage 2</a></li>
+                       <li><a href="#">Homepage 3</a></li>
+                       <li><a href="#">Homepage 4</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">Other Stuff</a>
+                    <ul style="display: none;" class="dropdown-menu bold">
+                       <li><a href="#">Dogs</a></li>
+                       <li><a href="#">Cats</a></li>
+                       <li><a href="#">Hampsters</a></li>
+                       <li><a href="#">Guinea Pigs</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" href="#">Some Shit</a>
+                    <ul style="display: none;" class="dropdown-menu bold">
+                        <li><a href="#">Some Other Shit</a></li>
+                        <li><a href="#">Some Cool Shit</a></li>
+                        <li><a href="#">Some Way Cool Shit</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="col-md-2">
+                <img src="https://s-media-cache-ak0.pinimg.com/236x/7e/e0/3c/7ee03cfc960ba7e2c2b99e7cb753b27b.jpg" id="logo"/>
+              </div>
+            </div>
+            <div class="col-md-10"></div>
+              <div class="shop-cart-search-bar col-md-2">
+                <input type="text" name="shop-cart-search-bar" placeholder="# Shopping Cart Items">
+              </div>
+          </div>
+      </header>
+      <div class="container-fluid col-md-12" id="carousel">
+        <!-- somehow put the carousel in here -->
+      </div>
+      <div class="featured-img col-md-4" id="img-1">
+      <!-- put first random image in here -->
+      </div>
+      <div class="featured-img col-md-4" id="img-2">
+      <!-- put second random image in here -->
+      </div>
+      <div class="featured-img col-md-4" id="img-3">
+      <!-- put third random image in here -->
+      </div>
+      <form class="email-signup col-md-4">
+        <label for="email-signup">Let us Spam You!</label>
+        <input class="form-control" type="email" name="email-signup" placeholder="spamMe@internet.com">
+        <button class="btn btn-success" type="submit" name="signup-btn">Submit</button>
+      </form>
+      <footer class="col-md-12">
+        <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Map</h3>
+                    <!-- put map img here -->
+                </div>
+                <div class="col-md-3">
+                    <h3>Some Cool Shit</h3>
+                    <ul>
+                        <li> <a href="#">Boom</a> </li>
+                        <li> <a href="#">Pow</a> </li>
+                        <li> <a href="#">Cha-Ching</a> </li>
+                        <li> <a href="#">Ca-Caw</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Lets Do a Link</h3>
+                    <ul>
+                        <li> <a href="#">Some Link</a> </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Some Link</h3>
+                    <ul>
+                        <li> <a href="#">I Like Lamp</a> </li>
+                    </ul>
+                </div>
+      </footer>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
