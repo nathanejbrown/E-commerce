@@ -1,10 +1,9 @@
 $('document').ready(function() {
   var everyProduct = [];
-  var randomProducts = [];
   var productPictures = ['http://lorempixel.com/250/250/sports/1',
   'http://lorempixel.com/250/250/sports/2',
   'http://lorempixel.com/250/250/sports/3',
-  'http://lorempixel.com/250/250/sports/4',
+  'http://lorempixel.com/250/250/nightlife/3',
   'http://lorempixel.com/250/250/sports/5',
   'http://lorempixel.com/250/250/sports/6',
   'http://lorempixel.com/250/250/sports/7',
@@ -13,25 +12,33 @@ $('document').ready(function() {
   'http://lorempixel.com/250/250/sports/10',
   'http://lorempixel.com/250/250/nightlife/1',
   'http://lorempixel.com/250/250/nightlife/2'];
+  var randomProducts = [];
   console.log('Sanity check');
-  return new Promise(function (resolve, reject) {
-    $.ajax({
-      url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
-    }).then(function(products) {
-      products.forEach(function(item) {
-        item.picture = randomArrayIndex(productPictures);
-        everyProduct.push(item);
-      });
+
+     Promise.resolve($.ajax({
+       url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
+     })).then(function(products) {
+        var productsClone = products.splice(0);
+        var picturesClone = productPictures.splice(0);
+       for (item in productsClone) {
+         console.log('item', item);
+         var randomPicture = randomArrayIndex(picturesClone);
+         console.log('randomPicture', randomPicture);
+         productsClone[item].picture = picturesClone[randomPicture];
+         picturesClone.splice(randomPicture, 1);
+         productsClone[item].rating = getRandomNumber(5);
+         everyProduct.push(productsClone[item]);
+         productsClone.splice(item, 1);
+         console.log('products after splice', productsClone);
+       };
     }).then(function() {
-      getRandomProducts(3);
-    }).then(function() {
-      console.log(randomProducts);
+      getRandomProducts(10);
     }).then(function() {
       addProductInfoToPage(randomProducts);
-    }).fail(function(error) {
+    }).catch(function(error) {
       console.log(error);
     })
-  })
+
 
 
 
@@ -40,32 +47,37 @@ $('document').ready(function() {
 //All functions declared below this line.
 
   function getRandomProducts(number) {
-    // var alreadyUsedNumbers = [];
     for (var i = 0; i < number; i++) {
-      var random = randomArrayIndex(everyProduct);
-      // while (alreadyUsedNumbers.indexOf(random) > -1) {
-      //   random = randomArrayIndex(everyProduct);
-      // }
-      // alreadyUsedNumbers.push(random);
+      var everyProductClone = everyProduct.slice(0);
+      var random = randomArrayIndex(everyProductClone);
       randomProducts.push(everyProduct[random]);
+      everyProductClone.splice(random, 1);
     }
   }
 
   function randomArrayIndex(array) {
-    var alreadyUsedNumbers = [];
     var randomIndex = Math.floor(Math.random()*array.length);
-    while(alreadyUsedNumbers.indexOf(randomIndex) > -1) {
-      var randomIndex = Math.floor(Math.random()*array.length);
-    }
-    alreadyUsedNumbers.push(randomIndex);
     return randomIndex;
+  }
+
+  function getRandomNumber(ceilingNumber) {
+    return Math.ceil(Math.random()*ceilingNumber);
   }
 
   function addProductInfoToPage(array) {
     for (item in array) {
       $('div#productInfo' + item +  ' p.description').text(array[item].description);
       $('div#productInfo' + item + ' p.price').text(array[item].price);
+      $('div#productInfo' + item + ' img').attr('src', array[item].picture);
+      addStarRating(array[item].rating, item);
     }
   }
-
+  function addStarRating(numberOfStars, itemNumber) {
+    var stars = [];
+    for (i = 0; i < numberOfStars; i++) {
+      stars[i] = '&#9734';
+    }
+    stars = stars.join(' ');
+    $('div#productInfo' + itemNumber + ' div').append('<span>' + stars + '</span>')*numberOfStars;
+  }
 });
