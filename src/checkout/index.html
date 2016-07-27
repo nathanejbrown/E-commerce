@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Checkout Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
   <header class="col-md-12">
@@ -26,21 +27,22 @@
             </div>
         </div>
     </section>
+    <form>
     <section class="shipping form-group">
 
-        <label>First Name</label>
-        <input id="shippingName" type="text" placeholder="" value=""></input>
-        <label>Last Name</label>
-        <input id="shippingLastName" value=""></input>
+        <label>First Name (required)</label>
+        <input id="shippingName" type="text" placeholder="" value="" required></input>
+        <label>Last Name (required)</label>
+        <input id="shippingLastName" value="" required></input>
         <label>Company</label>
         <input id="shippingCompany" value=""></input>
-        <label>Address Line 1</label>
-        <input id="shippingAddress1" value=""></input>
+        <label>Address Line 1 (required)</label>
+        <input id="shippingAddress1" value="" required></input>
         <label>Address Line 2</label>
         <input id="shippingAddress2" value=""></input>
-        <label>State</label>
-        <select class="col-md-3" id="shippingState" name="state">
-            <option value="">N/A</option>
+        <label>State (required)</label>
+        <select class="col-md-3" id="shippingState" name="state" required>
+            <option value="">Select A State</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
             <option value="AR">Arkansas</option>
@@ -94,25 +96,25 @@
             <option value="WV">West Virginia</option>
             <option value="WY">Wyoming</option>
         </select>
-        <label>Zip</label>
-        <input type="number"></input>
+        <label>Zip (required)</label>
+        <input type="text" id="shippingZip"></input>
         <input type="radio" id="sameAsBilling"></input>
         <label>Copy Shipping to Billing?</label>
     </section>
     <section class="billing form-group">
-        <label>First Name</label>
-        <input id="billingName" type="text" value=""></input>
-        <label>Last Name</label>
-        <input id="billingLastName" value=""></input>
+        <label>First Name (required)</label>
+        <input id="billingName" type="text" value="" required ></input>
+        <label>Last Name (required)</label>
+        <input id="billingLastName" value="" required></input>
         <label>Company</label>
         <input id="billingCompany" value=""></input>
-        <label>Address Line 1</label>
-        <input id="billingAddress1" value=""></input>
+        <label>Address Line 1 (required)</label>
+        <input id="billingAddress1" value="" required></input>
         <label>Address Line 2</label>
         <input id="billingAddress2" value=""></input>
-        <label>State</label>
-        <select class="col-md-3" id="billingState" name="state" value="">
-            <option value="">N/A</option>
+        <label>State (required)</label>
+        <select class="col-md-3" id="billingState" name="state" value="" required>
+            <option value="">Select A State</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
             <option value="AR">Arkansas</option>
@@ -166,19 +168,20 @@
             <option value="WV">West Virginia</option>
             <option value="WY">Wyoming</option>
         </select>
-        <label id="billingZip">Zip</label>
-        <input type="number" value=""></input>
+        <label>Zip (required)</label>
+        <input type="text" value="" id="billingZip" required></input>
     </section>
     <section>
         <h2>Credit Card Information</h2>
-        <label>Credit Card Number</label>
-        <input type="number"></input>
-                <label>Expiration</label>
-                <input type="date" id="expirationCC"></input>
-                        <label>CVC</label>
-                        <input id="cvc" type="number"></input>
+        <label>Credit Card Number (required)</label>
+        <input type="number" required></input>
+                <label>Expiration (required)</label>
+                <input type="date" id="expirationCC" required></input>
+                        <label>CVC (required)</label>
+                        <input id="cvc" type="number" required></input>
                         <button type="submit">Purchase</button>
     </section>
+  </form>
     <footer>
         <section class="footerSection">
             <a>Visit US!</a>
