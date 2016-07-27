@@ -7,29 +7,43 @@ header {
   padding: 0 0 20px;
 }
 
-.nav > li > a {
-  display: block;
+ul li ul.dropdown-menu {
+        min-width: 100%;
+        background: #009966;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        color: white;
+    }
+
+ul li:hover ul.dropdown-menu {
+        display: block;
+    }
+
+.nav > li > a:hover {
+  background: #009966;
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-  background-color: #eeeeee;
-  display: inline-block;
-}
-
 .nav > li > a {
-  color: #003366;
+  color: white;
   margin: 10px;
-
 }
 
 #logo {
   float: right;
+  margin-top: 20px;
 }
 
 .shop-cart-search-bar {
   float: right;
   margin-top: 10px;
+}
+
+#carousel {
+  height: 200px;
+  background: yellow;
+  border: 2px solid black;
 }
 
 footer {

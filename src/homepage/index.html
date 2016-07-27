@@ -3,27 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Homepage</title>
-    <link rel="stylesheet" href="main.css" charset="utf-8">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" charset="utf-8">
   </head>
   <body>
     <div class="container">
       <header>
           <div class="navbar navbar-static-top">
-            <div class="navigation">
+            <div class="container-fluid">
               <nav class="col-md-10">
-                <ul class="nav topnav bold">
+                <ul class="nav navbar-nav">
                   <li class="dropdown">
-                    <a class="dropdown-toggle" href="#">Home</a>
-                    <ul style="display: toggle;" class="dropdown-menu bold">
-                       <li><a href="http://www.espn.com">Homepage 2</a></li>
-                       <li><a href="#">Homepage 3</a></li>
-                       <li><a href="#">Homepage 4</a></li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Home</b></a>
+                    <ul class="dropdown-menu">
+                       <li class="sub"><a href="#">Homepage 2</a></li>
+                       <li class="sub"><a href="#">Homepage 3</a></li>
+                       <li class="sub"><a href="#">Homepage 4</a></li>
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" href="#">Other Stuff</a>
-                    <ul style="display: none;" class="dropdown-menu bold">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Other Stuff</b></a>
+                    <ul class="dropdown-menu">
                        <li><a href="#">Dogs</a></li>
                        <li><a href="#">Cats</a></li>
                        <li><a href="#">Hampsters</a></li>
@@ -31,8 +31,8 @@
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" href="#">Some Shit</a>
-                    <ul style="display: none;" class="dropdown-menu bold">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Some Shit</b></a>
+                    <ul class="dropdown-menu">
                         <li><a href="#">Some Other Shit</a></li>
                         <li><a href="#">Some Cool Shit</a></li>
                         <li><a href="#">Some Way Cool Shit</a></li>
@@ -41,7 +41,7 @@
                 </ul>
               </nav>
               <div class="col-md-2">
-                <img src="https://s-media-cache-ak0.pinimg.com/236x/7e/e0/3c/7ee03cfc960ba7e2c2b99e7cb753b27b.jpg" id="logo"/>
+                <img src="http://placehold.it/300x50" id="logo"/>
               </div>
             </div>
             <div class="col-md-10"></div>
@@ -51,7 +51,12 @@
           </div>
       </header>
       <div class="container-fluid col-md-12" id="carousel">
-        <!-- somehow put the carousel in here -->
+
+
+
+
+
+
       </div>
       <div class="featured-img col-md-4" id="img-1">
       <!-- put first random image in here -->
@@ -97,6 +102,8 @@
                     </ul>
                 </div>
       </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
