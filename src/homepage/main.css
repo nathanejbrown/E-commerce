@@ -4,7 +4,6 @@ header {
   box-shadow: 0 0 0 8px #003366;
   position: relative;
   z-index: 2000;
-  padding: 0 0 20px;
 }
 
 ul li ul.dropdown-menu {
@@ -40,30 +39,36 @@ ul li:hover ul.dropdown-menu {
   margin-top: 10px;
 }
 
+/***CAROUSEL CSS***/
+
+#btn-prev {
+  float: left;
+  padding: 15px;
+  background: grey;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+#btn-next {
+  float: right;
+  padding: 15px;
+  background: grey;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
 #carousel {
   height: 250px;
   background: #003366;
   border: 2px solid black;
 }
-
-footer {
-  background: grey;
-}
-
-#btn-prev {
-  float: left;
-}
-
-#btn-next {
-  float: right;
-}
-
 .carouselbox {
   width: 100%;
   position: relative;
   margin: 1em;
   border: 1px solid #ccc;
-  box-shadow: 2px 2px 10px #ccc;
   overflow: hidden;
 }
 
@@ -73,22 +78,57 @@ footer {
   width: 100%;
   list-style: none;
   text-align: center;
+
 }
 
 .active {
-  height: 130px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
 }
 .active li {
   position: absolute;
-  top: 200px;
+  top: 50px;
+  opacity: 0;
+  transform: scale(0);
+  transition: 1s;
+
+
 }
 .active li.current {
-  top: 30px;
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+
+
+}
+
+.content img {
+  width: 100%;
+  display: block;
+  height: 250px;
+}
+
+
+
+
+
+/***CAROUSEL CSS***/
+
+/***FOOTER CSS***/
+
+footer {
+  background: grey;
 }
 
 #map {
   height: 150px;
 }
+
+/***FOOTER CSS***/
+
+/***EMAIL SIGNUP CSS***/
 
 #email-input {
   height: 50px;
@@ -103,3 +143,5 @@ footer {
 #signup-btn {
   margin: 7px;
 }
+
+/***EMAIL SIGNUP CSS***/
