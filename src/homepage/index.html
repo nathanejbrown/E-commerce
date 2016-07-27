@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Homepage</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" charset="utf-8">
   </head>
   <body>
@@ -50,35 +51,51 @@
               </div>
           </div>
       </header>
-      <div class="container-fluid col-md-12" id="carousel">
-
-
-
-
-
-
+      <!-- CAROUSEL HTML -->
+      <div class="container col-md-12" id="carousel">
+        <div class="carouselbox active form-control">
+          <div class="buttons">
+            <button class="prev" id="btn-prev">
+              <span class="offscreen"><</span>
+            </button>
+            <button class="next" id="btn-next">
+              <span class="offscreen">></span>
+            </button>
+          </div>
+            <ol class="content">
+              <li class="current"><img src="http://animal-dream.com/data_images/dog/dog6.jpg"/></li>
+              <li><img src="http://animal-dream.com/data_images/dog/dog3.jpg"/></li>
+              <li><img src="https://www.petfinder.com/wp-content/uploads/2012/11/122163343-conditioning-dog-loud-noises-632x475.jpg"/></li>
+              <li><img src="http://blogs.psychcentral.com/life-goals/files/2014/09/cute-dog-pup.jpg"/></li>
+            </ol>
+        </div>
       </div>
+      <!-- PLACEHOLDER FOR THREE RANDOM IMAGES -->
       <div class="featured-img col-md-4" id="img-1">
-      <!-- put first random image in here -->
+        <img src="http://placehold.it/350x200" id="ph-1"/>
       </div>
       <div class="featured-img col-md-4" id="img-2">
-      <!-- put second random image in here -->
+        <img src="http://placehold.it/350x200" id="ph-2"/>
       </div>
       <div class="featured-img col-md-4" id="img-3">
-      <!-- put third random image in here -->
+        <img src="http://placehold.it/350x200" id="ph-3"/>
       </div>
-      <form class="email-signup col-md-4">
-        <label for="email-signup">Let us Spam You!</label>
-        <input class="form-control" type="email" name="email-signup" placeholder="spamMe@internet.com">
-        <button class="btn btn-success" type="submit" name="signup-btn">Submit</button>
-      </form>
+      <!-- EMAIL SIGNUP -->
+      <div class="row">
+        <form class="email-signup col-md-12">
+          <label for="email-signup" class="col-md-2" id="email-label">Let us Spam You!</label>
+          <input class="col-md-5" type="email" name="email-signup" placeholder="spamMe@internet.com" id="email-input">
+          <button class="btn btn-success" type="submit" name="signup-btn" id="signup-btn">Submit</button>
+        </form>
+    </div>
+      <!-- FOOTER -->
       <footer class="col-md-12">
         <div class="footer" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <h3>Map</h3>
-                    <!-- put map img here -->
+                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=440x380&maptype=roadmap&markers=36.169422,-115.141106&key=AIzaSyDtmnH6A3wXzeodRMsMRqsdumpIAHXRsVw&sensor=false"/>
                 </div>
                 <div class="col-md-3">
                     <h3>Some Cool Shit</h3>
