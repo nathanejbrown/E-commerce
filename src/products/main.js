@@ -12,46 +12,32 @@ $('document').ready(function() {
   'http://lorempixel.com/250/250/sports/10',
   'http://lorempixel.com/250/250/nightlife/1',
   'http://lorempixel.com/250/250/nightlife/2'];
-  var randomProducts = [];
+  var tenProducts = [];
   console.log('Sanity check');
 
-     Promise.resolve($.ajax({
-       url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
-     })).then(function(products) {
-        var productsClone = products.splice(0);
-        var picturesClone = productPictures.splice(0);
-       for (item in productsClone) {
-         console.log('item', item);
-         var randomPicture = randomArrayIndex(picturesClone);
-         console.log('randomPicture', randomPicture);
-         productsClone[item].picture = picturesClone[randomPicture];
-         picturesClone.splice(randomPicture, 1);
-         productsClone[item].rating = getRandomNumber(5);
-         everyProduct.push(productsClone[item]);
-         productsClone.splice(item, 1);
-         console.log('products after splice', productsClone);
-       };
-    }).then(function() {
-      getRandomProducts(10);
-    }).then(function() {
-      addProductInfoToPage(randomProducts);
-    }).catch(function(error) {
-      console.log(error);
-    })
-
-
-
-
-
+    Promise.resolve($.ajax({
+      url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
+    })).then(function(products) {
+      products.forEach(function(product, index) {
+        product.picture = productPictures[index];
+        console.log(product.picture);
+        product.rating = getRandomNumber(5);
+        everyProduct.push(product);
+      });
+   }).then(function() {
+     getTenProducts();
+   }).then(function() {
+     addProductInfoToPage(tenProducts);
+   }).catch(function(error) {
+     console.log(error);
+   });
 
 //All functions declared below this line.
 
-  function getRandomProducts(number) {
-    for (var i = 0; i < number; i++) {
-      var everyProductClone = everyProduct.slice(0);
-      var random = randomArrayIndex(everyProductClone);
-      randomProducts.push(everyProduct[random]);
-      everyProductClone.splice(random, 1);
+  function getTenProducts() {
+    for (var i = 0; i < 10; i++) {
+      tenProducts.push(everyProduct[i]);
+      console.log(everyProduct[i]);
     }
   }
 

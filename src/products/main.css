@@ -1,0 +1,13 @@
+main #productInfo0 {
+  border-top: 1px solid lightgrey;
+  padding-top: 10px;
+}
+#products img {
+  float: left;
+}
+#products .productBox {
+  margin-bottom: 5px;
+}
+#products .toRight {
+  padding-left: 5px;
+}
