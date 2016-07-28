@@ -32,6 +32,8 @@ ul li:hover ul.dropdown-menu {
 #logo {
   float: right;
   margin-top: 20px;
+  height: 50px;
+  width: 350px;
 }
 
 .shop-cart-search-bar {
@@ -78,14 +80,12 @@ ul li:hover ul.dropdown-menu {
   width: 100%;
   list-style: none;
   text-align: center;
-
 }
 
 .active {
   height: 100%;
   width: 100%;
   margin: auto;
-
 }
 .active li {
   position: absolute;
@@ -93,23 +93,21 @@ ul li:hover ul.dropdown-menu {
   opacity: 0;
   transform: scale(0);
   transition: 1s;
-
-
 }
 .active li.current {
   opacity: 1;
   transform: scale(1);
   transition: 1s;
-
-
 }
 
 .content img {
-  width: 100%;
+  width: 108%;
   display: block;
-  height: 250px;
+  height: 240px;
+  margin-left: -75px;
+  margin-top: -109px;
+  margin-right: -100px;
 }
-
 
 
 
