@@ -1,0 +1,14 @@
+header {
+  background-color: black;
+}
+header nav {
+  background-color: white;
+  opacity: 0.8;
+}
+header h1 {
+  float: left;
+}
+#shoppingCart {
+  background-color: red;
+  color: white;
+}

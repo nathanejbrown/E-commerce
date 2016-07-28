@@ -69,12 +69,10 @@ $('document').ready(function() {
   function addSaleItems(array) {
     for (item in array) {
     var stars = makeSomeStars(array[item].rating);
-    console.log('item', array[item]);
     $('#saleItems').append('<img class="sale" src="' + array[item].picture + '"><span class="rating toRight">' + stars + '</span><br>');
     }
   }
 
-  // filter price
   function price(products) {
     $('.priceB button').click(function () {
       var num = parseInt(this.value);
@@ -88,7 +86,6 @@ $('document').ready(function() {
     });
   }
 
-// filter size
   function size(products) {
     $('.sizeB button').click(function(){
       var num = parseInt(this.value);
