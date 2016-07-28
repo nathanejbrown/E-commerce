@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>Products</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./main.css">
   </head>
   <body>
-    <header class="col-md-12">
+    <header class="col-md-12 row">
       <h1>eCommerce Site</h1>
       <nav class="primary-nav text-center">
         <a href="../checkout/index.html" style='border-right: 1px solid'>Checkout</a>
@@ -16,112 +17,66 @@
       <div id='shoppingCart'></div>
     </header>
     <main>
-      <div id='productFilter' class='col-md-12'>
-        <h2>Products</h2>
-        <div class='sortBy1 col-md-6'>
-          <ul>
-            <li><input class="sort1"></li>
-            <li><input class="sort2"></li>
-            <li><input class="sort3"></li>
-          </ul>
+      <div id='productFilter' class='col-md-12 row'>
+        <h2 class="text-center">Products</h2>
+        <div class='sortBy1 col-md-6 row priceB'>
+          <h2>Sort by Price:</h2>
+            <button value="20">Under $20</button>
+            <button value="50">Under $50</button>
+            <button value="100">Under $100</button>
         </div>
-        <div class='sortBy2 col-md-6'>
-          <ul>
-            <li><input class="sort1"></li>
-            <li><input class="sort2"></li>
-            <li><input class="sort3"></li>
-          </ul>
+        <div class='sortBy2 col-md-6 sizeB'>
+          <h2>Sort by Size:</h2>
+            <button value="0">Size: 0</button>
+            <button value="1">Size: 1</button>
+            <button value="2">Size: 2</button>
+            <button value="3">Size: 3</button>
+            <button value="4">Size: 4</button>
         </div>
-      </div>
-      <div id="products">
-        <div id="productInfo0" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product1</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo1" class="col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product2</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo2" class="col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product3</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo3" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product4</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo4" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product5</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo5" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product6</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo6" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product7</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo7" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product8</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo8" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product9</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-        <div id="productInfo9" class="row col-md-10 col-md-offset-1 productBox">
-          <img src="http://placehold.it/250x250"><h3>Product10</h3>
-          <p class="price toRight"></p>
-          <div><span class="rating toRight"></span></div>
-          <p class='description toRight'>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
+      <div id="products" class='row'></div>
+
+      <div id="filteredProducts"></div>
     </main>
-    <footer class='col-md-12'>
-      <section class="footerSection">
-        <a>Visit US!</a>
-        <img src="#" class="footerMap" alt="This is our Location!"/>
-      </section>
-      <section class="footerSection">
-        <a>Item 1</a>
-        <a>Item 2</a>
-        <a>Item 3</a>
-        <a>Item 4</a>
-      </section>
-      <section class="footerSection">
-        <a>Item 1</a>
-        <a>Item 2</a>
-        <a>Item 3</a>
-        <a>Item 4</a>
-      </section>
-      <section class="footerSection">
-        <a>Item 1</a>
-        <a>Item 2</a>
-        <a>Item 3</a>
-        <a>Item 4</a>
-      </section>
-    </footer>
+    <footer class="col-md-12">
+        <div class="footer" id="footer">
+            <div class="row">
+                <div class="col-md-3">
+                  <h3>Location</h3>
+                  <div id="googleMap" style="width:250px;height:250px;"></div>
+                  <p>1062 Delaware Street
+                  <br>
+                  Denver, CO 80204</p>
+                </div>
+                <div class="col-md-3 sale">
+                  <h3>About</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </div>
+                <div id="saleItems" class="col-md-3">
+                  <h3>Sale</h3>
+                </div>
+                <div class="col-md-3">
+                  <h3>Connect</h3>
+                  <ul>
+                      <li class="icon"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></li>
+                  </ul>
+                  <h3>Contact</h3>
+                  <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>Phone: (000) 000.0000</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i>Email: xxx@xxx.com</li>
+                  </ul>
+                </div>
+            </div>
+          </dv>
+      </footer>
 
     <script   src="http://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>
