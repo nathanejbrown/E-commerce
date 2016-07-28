@@ -1,0 +1,95 @@
+
+/** {
+  border: solid 1px black;
+}*/
+
+body {
+  padding:5px;
+  margin-left: 10px;
+  display: block;
+
+}
+
+#shoppingCart {
+  padding: 0px;
+  clear:both;
+
+}
+
+h1{
+  width: 85%;
+
+
+}
+.productPriceContainer {
+  display:block;
+
+}
+
+.purchaseBox {
+  border-bottom: 2px black solid;
+  background-color: 	#D3D3D3;
+
+}
+
+#shippingName {
+  min-width: 75%;
+
+
+
+}
+
+
+
+button {
+  display: inline-flex;
+  align-items: center;
+  top: 10px;
+  width: 150px;
+  padding:7.5px;
+
+
+}
+
+.btn {
+  color: green;
+  background-color: blue;
+}
+
+
+form {
+  border: #A8A8A8 solid 1px;
+  padding: 5px;
+}
+
+.billing {
+  border-top: #A8A8A8 solid 3px
+
+}
+
+.shipping {
+  padding-bottom: 10px;
+}
+
+#shippingAddress1, #shippingAddress2, #billingAddress1, #billingAddress2 {
+  width:90%;
+}
+
+.row {
+  padding: 5px;
+}
+
+#shoppingCart {
+  float:right;
+
+}
+
+.product{
+  width: 150px;
+  display:block;
+}
+
+.prices{
+  width: 150px;
+  display: block;
+}
