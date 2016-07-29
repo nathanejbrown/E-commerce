@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 <head>
     <meta charset="utf-8">
     <title>Checkout Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<<<<<<< HEAD
 
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
@@ -177,6 +182,45 @@
         <div class="form-group col-md-4">
         <label>State (required)</label><br>
         <select class="form-control" id="billingState" name="state" value="" required>
+=======
+    <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+  <header class="col-md-12">
+      <h1>eCommerce Site</h1>
+        <nav class="primary-nav text-center">
+          <a href="../products/index.html" style='border-right: 1px solid'>Products</a>
+          <a href="../homepage/index.html">Home</a>
+        </nav>
+      <div id='shoppingCart'></div>
+  </header>
+    <section class="checkout">
+        <h1>Checkout</h1>
+        <div class="purchaseBox">
+            <h3 id="purchaseBoxHeader">Your Purchase</h3>
+            <div id="productContainer"></div>
+            <div id="productPriceContainer"></div>
+            <div id="totalBox">
+                <div id="totalPrice"></div>
+            </div>
+        </div>
+    </section>
+    <form>
+    <section class="shipping form-group">
+
+        <label>First Name (required)</label>
+        <input id="shippingName" type="text" placeholder="" value="" required></input>
+        <label>Last Name (required)</label>
+        <input id="shippingLastName" value="" required></input>
+        <label>Company</label>
+        <input id="shippingCompany" value=""></input>
+        <label>Address Line 1 (required)</label>
+        <input id="shippingAddress1" value="" required></input>
+        <label>Address Line 2</label>
+        <input id="shippingAddress2" value=""></input>
+        <label>State (required)</label>
+        <select class="col-md-3" id="shippingState" name="state" required>
+>>>>>>> master
             <option value="">Select A State</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -231,6 +275,7 @@
             <option value="WV">West Virginia</option>
             <option value="WY">Wyoming</option>
         </select>
+<<<<<<< HEAD
       </div>
           <div class="form-group col-md-4">
             <label>Zip (required)</label><br>
@@ -304,6 +349,121 @@
     <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="buy.js"></script>
+=======
+        <label>Zip (required)</label>
+        <input type="text" id="shippingZip"></input>
+        <input type="radio" id="sameAsBilling"></input>
+        <label>Copy Shipping to Billing?</label>
+    </section>
+    <section class="billing form-group">
+        <label>First Name (required)</label>
+        <input id="billingName" type="text" value="" required ></input>
+        <label>Last Name (required)</label>
+        <input id="billingLastName" value="" required></input>
+        <label>Company</label>
+        <input id="billingCompany" value=""></input>
+        <label>Address Line 1 (required)</label>
+        <input id="billingAddress1" value="" required></input>
+        <label>Address Line 2</label>
+        <input id="billingAddress2" value=""></input>
+        <label>State (required)</label>
+        <select class="col-md-3" id="billingState" name="state" value="" required>
+            <option value="">Select A State</option>
+            <option value="AK">Alaska</option>
+            <option value="AL">Alabama</option>
+            <option value="AR">Arkansas</option>
+            <option value="AZ">Arizona</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DC">District of Columbia</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="IA">Iowa</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MD">Maryland</option>
+            <option value="ME">Maine</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MO">Missouri</option>
+            <option value="MS">Mississippi</option>
+            <option value="MT">Montana</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="NE">Nebraska</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NV">Nevada</option>
+            <option value="NY">New York</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="PR">Puerto Rico</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VA">Virginia</option>
+            <option value="VT">Vermont</option>
+            <option value="WA">Washington</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WV">West Virginia</option>
+            <option value="WY">Wyoming</option>
+        </select>
+        <label>Zip (required)</label>
+        <input type="text" value="" id="billingZip" required></input>
+    </section>
+    <section>
+        <h2>Credit Card Information</h2>
+        <label>Credit Card Number (required)</label>
+        <input type="number" required></input>
+                <label>Expiration (required)</label>
+                <input type="date" id="expirationCC" required></input>
+                        <label>CVC (required)</label>
+                        <input id="cvc" type="number" required></input>
+                        <button type="submit">Purchase</button>
+    </section>
+  </form>
+    <footer>
+        <section class="footerSection">
+            <a>Visit US!</a>
+            <img src="#" class="footerMap" alt="This is our Location!"/>
+        </section>
+        <section class="footerSection">
+            <a>Item 1</a>
+            <a>Item 2</a>
+            <a>Item 3</a>
+            <a>Item 4</a>
+        </section>
+        <section class="footerSection">
+            <a>Item 1</a>
+            <a>Item 2</a>
+            <a>Item 3</a>
+            <a>Item 4</a>
+        </section>
+        <section class="footerSection">
+            <a>Item 1</a>
+            <a>Item 2</a>
+            <a>Item 3</a>
+            <a>Item 4</a>
+        </section>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="main.js"></script>
+>>>>>>> master
 </body>
 
 </html>

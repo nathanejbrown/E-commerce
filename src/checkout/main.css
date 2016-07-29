@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 * {
   /*border: solid 1px black;*/
@@ -171,4 +172,16 @@ a.first {
 }
 a.second {
   border-left: 1px solid;
+=======
+body {
+  width: 100%;
+  height:auto;
+}
+
+header {
+  height: 5%;
+  width: 100%;
+  background-color:green;
+
+>>>>>>> master
 }
