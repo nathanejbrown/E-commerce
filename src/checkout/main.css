@@ -1,7 +1,8 @@
 
-/** {
-  border: solid 1px black;
-}*/
+* {
+  /*border: solid 1px black;*/
+  font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 body {
   padding:5px;
@@ -28,7 +29,10 @@ h1{
 
 .purchaseBox {
   border-bottom: 2px black solid;
-  background-color: 	#D3D3D3;
+  /*background-color: 	#D3D3D3;*/
+  /*min-height: 250px;*/
+  background-color: inherit;
+  opacity: .8;
 
 }
 
@@ -51,10 +55,10 @@ button {
 
 }
 
-.btn {
+/*.btn {
   color: green;
   background-color: blue;
-}
+}*/
 
 
 form {
@@ -85,11 +89,20 @@ form {
 }
 
 .product{
-  width: 150px;
+  width: 100%;
   display:block;
 }
 
 .prices{
-  width: 150px;
+  width: 100%;
   display: block;
+}
+
+.productholder {
+  /*min-height: 250px;*/
+
+}
+
+.checkout {
+  /*min-height: 300px;*/
 }
