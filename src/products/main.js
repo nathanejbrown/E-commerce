@@ -18,7 +18,7 @@ $('document').ready(function() {
   console.log('Sanity check');
 
   Promise.resolve($.ajax({
-    url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
+    url: 'https://galvanize-student-apis.herokuapp.com/gcommerce/products'
   })).then(function(products) {
     products.forEach(function(product, index) {
       product.picture = productPictures[index];

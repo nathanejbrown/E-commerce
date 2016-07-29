@@ -92,7 +92,7 @@ var productPictures = ['http://cdn.thisiswhyimbroke.com/images/hamburger-pet-bed
 var everyProduct = [];
 
   Promise.resolve($.ajax({
-      url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
+      url: 'https://galvanize-student-apis.herokuapp.com/gcommerce/products'
     })).then(function(products) {
         products.forEach(function(product, index) {
         product.picture = productPictures[index];
