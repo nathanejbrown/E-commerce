@@ -5,28 +5,21 @@
     <title>Checkout Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
-    <script type="text/javascript">Stripe.setPublishableKey('pk_test_sbjF15S7ES1E4MFEHpeE6Huf');</script>
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" media="screen" title="no title" charset="utf-8">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
 </head>
 <body>
-  <header class="col-md-12 container">
-    <img src="http://simpleicon.com/wp-content/uploads/Shopping-Cart-11-64x64.png" id='shoppingCart' height="50px" width="50px">
-    <div class="row">
-      <nav class="primary-nav text-center">
-        <a href="../products/index.html" style='border-right: 1px solid'>Products</a>
-        <a href="../homepage/index.html">Home</a>
-      </nav>
+  <header class="col-md-12 row text-center">
       <h1>eCommerce Site</h1>
-
-
-
-
-    </div>
-  </header>
+      <nav class="text-center">
+        <a href="../products/index.html" class="first">Products</a>
+        <a href="../homepage/index.html" class="second">Home</a>
+      </nav>
+      <div id='shoppingCart' class='col-md-3 col-md-offset-3 text-right glyphicon glyphicon-shopping-cart'> Hey Look A Cart</div>
+    </header>
     <section class="checkout container">
-        <h1>Checkout</h1>
+        <h1 class="green">Checkout</h1>
         <div class="purchaseBox row">
             <h3 id="purchaseBoxHeader" class="col-md-12">Your Purchase</h3>
             <div class="col-md-3 productholder container">
@@ -256,7 +249,7 @@
           </div>
           <div class="form-group col-md-3">
             <label>Expiration (required)</label><br>
-            <input type="month-year" class="form-control" id="ccExpiration" required></input>
+            <input type="date" class="form-control" id="ccExpiration" required></input>
           </div>
           <div class="form-group col-md-3">
             <label>CVC (required)</label><br>
@@ -308,9 +301,9 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-
+    <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
     <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="buy.js"></script>
 </body>
 
 </html>
