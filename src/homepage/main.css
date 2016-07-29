@@ -1,3 +1,8 @@
+body {
+  background-color: #bcd5d1;
+}
+
+/* header */
 header {
   background-color: #c9c9c9;
 }
@@ -25,77 +30,42 @@ a.second {
   border-left: 1px solid;
 }
 
-/*header {
-  background: grey;
-  border: 2px dashed  #ffffff;
-  position: relative;
-  z-index: 2000;
-}
-
-ul li ul.dropdown-menu {
-        min-width: 100%;
-        background: #009966;
-        display: none;
-        position: absolute;
-        z-index: 999;
-        left: 0;
-        color: white;
-    }
-
-ul li:hover ul.dropdown-menu {
-        display: block;
-    }
-
-.nav > li > a:hover {
-  background: #009966;
-}
-
-.nav > li > a {
-  color: white;
-  margin: 10px;
-}
-
-#logo {
-  float: right;
-  margin-top: 20px;
-  height: 50px;
-  width: 350px;
-}
-
-.shop-cart-search-bar {
-  float: right;
-  margin-top: 10px;
-}*/
-
 /***CAROUSEL CSS***/
 
+.buttons {
+  display: table-cell;
+}
+
 #btn-prev {
-  float: left;
+  left: 0;
+  top: 10;
   padding: 15px;
   background: grey;
   text-align: center;
   z-index: 10;
-  position: relative;
+  position: absolute;
 }
 
 #btn-next {
-  float: right;
+  right: 0;
+  top: 10;
   padding: 15px;
   background: grey;
   text-align: center;
   z-index: 10;
-  position: relative;
+  position: absolute;
 }
 
 #carousel {
   height: 500px;
+  margin: 20px 0;
 }
 .carouselbox {
   width: 100%;
   position: relative;
   margin: 1em;
-  border: 1px solid #ccc;
   overflow: hidden;
+  background-color: #bcd5d1;
 }
 
 .content li {
@@ -133,9 +103,41 @@ ul li:hover ul.dropdown-menu {
   margin-right: -100px;
 }
 
+/*featured image*/
+.featured-img img {
+  width: 250px;
+}
 
 
+/*footer styles*/
 
-/***CAROUSEL CSS***/
+footer {
+  background: #c9c9c9;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* social media icon */
+.icon {
+  display: inline-block;
+}
+
+/* fontawsome icon */
+i {
+  padding-right: 10px;
+}
+
+.clear {
+  clear: both;
+}
+img.sale {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
 
 /***FOOTER CSS***/
