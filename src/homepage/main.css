@@ -1,0 +1,141 @@
+header {
+  background-color: #c9c9c9;
+}
+header nav {
+  float: left;
+  padding-bottom: 2px;
+}
+header h1 {
+  position: relative;
+}
+#shoppingCart {
+  color: white;
+  float: right;
+}
+header nav a:hover {
+  color: #648880;
+}
+header nav a {
+  color: #89bdd3;
+}
+a.first {
+  border-right: 1px solid;
+}
+a.second {
+  border-left: 1px solid;
+}
+
+/*header {
+  background: grey;
+  border: 2px dashed  #ffffff;
+  position: relative;
+  z-index: 2000;
+}
+
+ul li ul.dropdown-menu {
+        min-width: 100%;
+        background: #009966;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        left: 0;
+        color: white;
+    }
+
+ul li:hover ul.dropdown-menu {
+        display: block;
+    }
+
+.nav > li > a:hover {
+  background: #009966;
+}
+
+.nav > li > a {
+  color: white;
+  margin: 10px;
+}
+
+#logo {
+  float: right;
+  margin-top: 20px;
+  height: 50px;
+  width: 350px;
+}
+
+.shop-cart-search-bar {
+  float: right;
+  margin-top: 10px;
+}*/
+
+/***CAROUSEL CSS***/
+
+#btn-prev {
+  float: left;
+  padding: 15px;
+  background: grey;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+#btn-next {
+  float: right;
+  padding: 15px;
+  background: grey;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+#carousel {
+  height: 500px;
+}
+.carouselbox {
+  width: 100%;
+  position: relative;
+  margin: 1em;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.content li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+
+.active {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+.active li {
+  position: absolute;
+  top: 50px;
+  opacity: 0;
+  transform: scale(0);
+  transition: 1s;
+}
+.active li.current {
+  opacity: 1;
+  transform: scale(1);
+  transition: 1s;
+}
+
+.content img {
+  width: 108%;
+  display: block;
+  height: 489px;
+  margin-left: -75px;
+  margin-top: -109px;
+  margin-right: -100px;
+}
+
+
+
+
+/***CAROUSEL CSS***/
+
+/***FOOTER CSS***/
