@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="./main.css">
   </head>
   <body>
-    <header class="col-md-12 row">
-      <h1>eCommerce Site</h1>
-      <nav class="primary-nav text-center">
-        <a href="../checkout/index.html" style='border-right: 1px solid'>Checkout</a>
-        <a href="../homepage/index.html">Home</a>
+    <header class="col-md-12 text-center">
+      <h1>Curious George's Pets</h1>
+      <nav class="text-center">
+        <a href="../checkout/index.html" class="first">Checkout</a>
+        <a href="../homepage/index.html" class="second">Home</a>
       </nav>
-      <div id='shoppingCart'></div>
+      <div id='shoppingCart' class='col-md-3 col-md-offset-3 text-right glyphicon glyphicon-shopping-cart'> Hey Look A Cart</div>
     </header>
     <main>
       <div id='productFilter' class='col-md-12 row'>
         <h2 class="text-center">Products</h2>
         <div class='sortBy1 col-md-6 row priceB'>
           <h2>Sort by Price:</h2>
-            <button value="20">Under $20</button>
-            <button value="50">Under $50</button>
-            <button value="100">Under $100</button>
+            <button class='btn btn-info' value="20">Under $20</button>
+            <button class='btn btn-info' value="50">Under $50</button>
+            <button class='btn btn-info' value="100">Under $100</button>
         </div>
-        <div class='sortBy2 col-md-6 sizeB'>
+        <div class='sortBy2 sizeB'>
           <h2>Sort by Size:</h2>
-            <button value="0">Size: 0</button>
-            <button value="1">Size: 1</button>
-            <button value="2">Size: 2</button>
-            <button value="3">Size: 3</button>
-            <button value="4">Size: 4</button>
+            <button class='btn btn-info' value="0">Size: 0</button>
+            <button class='btn btn-info' value="1">Size: 1</button>
+            <button class='btn btn-info' value="2">Size: 2</button>
+            <button class='btn btn-info' value="3">Size: 3</button>
+            <button class='btn btn-info' value="4">Size: 4</button>
         </div>
       <div id="products" class='row'></div>
 

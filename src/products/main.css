@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: #bcd5d1;
 }
 #products .productBox {
   margin-bottom: 5px;
@@ -10,18 +10,25 @@ body {
   visibility: hidden;
 }
 #productInfo {
-  border-top: 1px solid lightgrey;
-  background-color: white;
-  opacity: 0.7;
+  background-color: #5a5c51;
 }
-h1, h2 {
+#productInfo p, span {
+  color: #f0eceb;
+}
+h1 {
   color: white;
 }
 .sortBy2 {
   margin-bottom: 10px;
+  float: right;
 }
+h2 {
+  color: #648880;
+}
+/*footer styles*/
+
 footer {
-  background: grey;
+  background: #c9c9c9;
 }
 
 footer ul {
@@ -47,4 +54,33 @@ img.sale {
   width: 80px;
   height: 80px;
   margin-bottom: 15px;
+}
+
+/*Header styles*/
+
+header {
+  background-color: #c9c9c9;
+}
+header nav {
+  float: left;
+  padding-bottom: 2px;
+}
+header h1 {
+  position: relative;
+}
+#shoppingCart {
+  color: white;
+  float: right;
+}
+header nav a:hover {
+  color: #648880;
+}
+header nav a {
+  color: #89bdd3;
+}
+a.first {
+  border-right: 1px solid;
+}
+a.second {
+  border-left: 1px solid;
 }
