@@ -9,6 +9,8 @@ header h1 {
   float: left;
 }
 #shoppingCart {
-  background-color: red;
+  background-color: lightgrey;
+  opacity: 0.8;
   color: white;
+  float: right;
 }
