@@ -1,7 +1,33 @@
 header {
-  background: url(https://chrisaam.files.wordpress.com/2015/03/wallpaper-2846361.jpg);
+  background-color: #c9c9c9;
+}
+header nav {
+  float: left;
+  padding-bottom: 2px;
+}
+header h1 {
+  position: relative;
+}
+#shoppingCart {
+  color: white;
+  float: right;
+}
+header nav a:hover {
+  color: #648880;
+}
+header nav a {
+  color: #89bdd3;
+}
+a.first {
+  border-right: 1px solid;
+}
+a.second {
+  border-left: 1px solid;
+}
+
+/*header {
+  background: grey;
   border: 2px dashed  #ffffff;
-  box-shadow: 0 0 0 8px #003366;
   position: relative;
   z-index: 2000;
 }
@@ -32,12 +58,14 @@ ul li:hover ul.dropdown-menu {
 #logo {
   float: right;
   margin-top: 20px;
+  height: 50px;
+  width: 350px;
 }
 
 .shop-cart-search-bar {
   float: right;
   margin-top: 10px;
-}
+}*/
 
 /***CAROUSEL CSS***/
 
@@ -60,9 +88,7 @@ ul li:hover ul.dropdown-menu {
 }
 
 #carousel {
-  height: 250px;
-  background: #003366;
-  border: 2px solid black;
+  height: 500px;
 }
 .carouselbox {
   width: 100%;
@@ -78,14 +104,12 @@ ul li:hover ul.dropdown-menu {
   width: 100%;
   list-style: none;
   text-align: center;
-
 }
 
 .active {
   height: 100%;
   width: 100%;
   margin: auto;
-
 }
 .active li {
   position: absolute;
@@ -93,23 +117,21 @@ ul li:hover ul.dropdown-menu {
   opacity: 0;
   transform: scale(0);
   transition: 1s;
-
-
 }
 .active li.current {
   opacity: 1;
   transform: scale(1);
   transition: 1s;
-
-
 }
 
 .content img {
-  width: 100%;
+  width: 108%;
   display: block;
-  height: 250px;
+  height: 489px;
+  margin-left: -75px;
+  margin-top: -109px;
+  margin-right: -100px;
 }
-
 
 
 
@@ -118,15 +140,50 @@ ul li:hover ul.dropdown-menu {
 
 /***FOOTER CSS***/
 
-footer {
-  background: grey;
+
+  footer {
+    background: grey;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+  }
+
+
+  /* social media icon */
+  .icon {
+    display: inline-block;
+  }
+
+  /* fontawsome icon */
+  i {
+    padding-right: 10px;
+  }
+
+  .clear {
+    clear: both;
+  }
+
+  img.sale {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
 }
 
-#map {
-  height: 150px;
-}
+
 
 /***FOOTER CSS***/
+
+/**3 image css**/
+
+.featured-img img {
+  width: 350px;
+  height: 200px;
+}
+
+
 
 /***EMAIL SIGNUP CSS***/
 
@@ -142,6 +199,10 @@ footer {
 
 #signup-btn {
   margin: 7px;
+}
+
+.message {
+  color: red;
 }
 
 /***EMAIL SIGNUP CSS***/
