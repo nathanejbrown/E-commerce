@@ -17,32 +17,32 @@ $('document').ready(function() {
 
   console.log('Sanity check');
 
-    Promise.resolve($.ajax({
-      url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
-    })).then(function(products) {
-      products.forEach(function(product, index) {
-        product.picture = productPictures[index];
-        product.rating = getRandomNumber(5);
-        everyProduct.push(product);
-      });
-      price(everyProduct);
-      size(everyProduct);
-   }).then(function() {
-     var sales = getAnyNumberOfProducts(3);
-     var items = getAnyNumberOfProducts(10);
-     addProductInfoToPage(items);
-     addSaleItems(sales);
-   }).catch(function(error) {
-     console.log(error);
-   });
+  Promise.resolve($.ajax({
+    url: 'http://galvanize-student-apis.herokuapp.com/gcommerce/products'
+  })).then(function(products) {
+    products.forEach(function(product, index) {
+      product.picture = productPictures[index];
+      product.rating = getRandomNumber(5);
+      everyProduct.push(product);
+    });
+    price(everyProduct);
+    size(everyProduct);
+  }).then(function() {
+    var sales = getAnyNumberOfProducts(3);
+    var items = getAnyNumberOfProducts(10);
+    addProductInfoToPage(items);
+    addSaleItems(sales);
+  }).catch(function(error) {
+    console.log(error);
+  });
 
-//All functions declared below this line.
+  //All functions declared below this line.
 
   function getAnyNumberOfProducts(num) {
     var randomProducts = [];
     var productsClone = everyProduct.slice(0);
-    for(i = 0; i < num; i++) {
-      var random = getRandomNumber(productsClone.length-1);
+    for (i = 0; i < num; i++) {
+      var random = getRandomNumber(productsClone.length - 1);
       randomProducts.push(productsClone[random]);
       productsClone.splice(random, 1);
     }
@@ -50,26 +50,26 @@ $('document').ready(function() {
   }
 
   function randomArrayIndex(array) {
-    var randomIndex = Math.floor(Math.random()*array.length);
+    var randomIndex = Math.floor(Math.random() * array.length);
     return randomIndex;
   }
 
   function getRandomNumber(ceilingNumber) {
-    return Math.ceil(Math.random()*ceilingNumber);
+    return Math.ceil(Math.random() * ceilingNumber);
   }
 
   function addProductInfoToPage(array) {
     $('#products').empty();
-    for (item in array) {
+    for (var item in array) {
       var stars = makeSomeStars(array[item].rating);
       $('div#products').append('<div id="productInfo" class="row col-md-10 col-md-offset-1 productBox"><img class="col-md-3" src="' + array[item].picture + '"><div class="toRight col-md-7"><p class="description toRight">' + array[item].description + '</p>' + '<p class="price toRight">' + array[item].price + '</p>' + '<span class="rating toRight">' + stars + '</span></div>' + '</div>');
     }
   }
 
   function addSaleItems(array) {
-    for (item in array) {
-    var stars = makeSomeStars(array[item].rating);
-    $('#saleItems').append('<img class="sale" src="' + array[item].picture + '"><span class="rating toRight">' + stars + '</span><br>');
+    for (var item in array) {
+      var stars = makeSomeStars(array[item].rating);
+      $('#saleItems').append('<img class="sale" src="' + array[item].picture + '"><span class="rating toRight">' + stars + '</span><br>');
     }
   }
 
@@ -77,7 +77,7 @@ $('document').ready(function() {
     $('.priceB button').click(function () {
       var num = parseInt(this.value);
       var product = products.filter(function (productPrice) {
-        return productPrice.price.replace('$', '') < num
+        return productPrice.price.replace('$', '') < num;
       });
       if (product.length > 10) {
         product = product.slice(0, 10);
@@ -87,10 +87,10 @@ $('document').ready(function() {
   }
 
   function size(products) {
-    $('.sizeB button').click(function(){
+    $('.sizeB button').click(function() {
       var num = parseInt(this.value);
       var product = products.filter(function (productSize) {
-        return  productSize.size === num;
+        return productSize.size === num;
       });
       if (product.length > 10) {
         product = product.slice(0, 10);
@@ -105,11 +105,11 @@ $('document').ready(function() {
       zoom:14,
       mapTypeId:google.maps.MapTypeId.ROADMAP
     };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var map = new google.maps.Map(document.getElementById('googleMap'),mapProp);
     var marker = new google.maps.Marker({
-     position: new google.maps.LatLng(39.733513, -104.992588),
-     map: map
-   });
+      position: new google.maps.LatLng(39.733513, -104.992588),
+      map: map
+    });
   }
   google.maps.event.addDomListener(window, 'load', initialize);
 
