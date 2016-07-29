@@ -5,17 +5,27 @@
     <title>Homepage</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kVo/Eh0sv7ZdiwZK32nRsp1FrDT3sLRLx3zVpSSTI9UdO5H02LJNLBg5F1gwvKg0" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css" charset="utf-8">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body>
     <div class="container">
-      <header>
+      <header class="col-md-12 text-center">
+      <h1>Curious George's Pets</h1>
+      <nav class="text-center">
+        <a href="../checkout/index.html" class="first">Checkout</a>
+        <a href="../products/index.html" class="second">Products</a>
+      </nav>
+      <div id='shoppingCart' class='col-md-3 col-md-offset-3 text-right glyphicon glyphicon-shopping-cart'> Hey Look A Cart</div>
+    </header>
+      <!-- <header>
           <div class="navbar navbar-static-top">
             <div class="container-fluid">
               <nav class="col-md-10">
                 <ul class="nav navbar-nav">
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Home</b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown"><a href="index.html"><b>Home</b></a></a>
                     <ul class="dropdown-menu">
                        <li class="sub"><a href="#">Homepage 2</a></li>
                        <li class="sub"><a href="#">Homepage 3</a></li>
@@ -23,7 +33,7 @@
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Other Stuff</b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" id="product-link"><a href="../products/index.html"><b>Products</b></a></a>
                     <ul class="dropdown-menu">
                        <li><a href="#">Dogs</a></li>
                        <li><a href="#">Cats</a></li>
@@ -32,7 +42,7 @@
                     </ul>
                   </li>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Some Shit</b></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown"><a href="../checkout/index.html"><b>Checkout Page</b></a></a>
                     <ul class="dropdown-menu">
                         <li><a href="#">Some Other Shit</a></li>
                         <li><a href="#">Some Cool Shit</a></li>
@@ -50,7 +60,7 @@
                 <input type="text" name="shop-cart-search-bar" placeholder="# Shopping Cart Items">
               </div>
           </div>
-      </header>
+      </header> -->
       <!-- CAROUSEL HTML -->
       <div class="col-md-12" id="carousel">
         <div class="carouselbox active form-control">
@@ -76,53 +86,73 @@
         </div>
       </div>
       <!-- PLACEHOLDER FOR THREE RANDOM IMAGES -->
-      <div class="featured-img col-md-4" id="img-1">
-        <img src="http://placehold.it/350x200" id="ph-1"/>
+
+      <div class="row img-featured col-md-12">
+
+      <div class="featured-img col-md-4">
+        <img src="http://placehold.it/350x200" id="item-0">
+        <div class="col-md-12" id="product-info-0">
+          <p>Placeholder Info</p>
+        </div>
       </div>
-      <div class="featured-img col-md-4" id="img-2">
-        <img src="http://placehold.it/350x200" id="ph-2"/>
+      <div class="featured-img col-md-4">
+        <img src="http://placehold.it/350x200" id="item-1">
+        <div class="col-md-12" id="product-info-1">
+          <p>Placeholder Info</p>
+        </div>
       </div>
-      <div class="featured-img col-md-4" id="img-3">
-        <img src="http://placehold.it/350x200" id="ph-3"/>
+      <div class="featured-img col-md-4">
+        <img src="http://placehold.it/350x200" id="item-2">
+        <div class="col-md-12" id="product-info-2">
+          <p>Placeholder Info</p>
+        </div>
       </div>
+    </div>
       <!-- EMAIL SIGNUP -->
       <div class="row">
         <form class="email-signup col-md-12">
           <label for="email-signup" class="col-md-2" id="email-label">Let us Spam You!</label>
-          <input class="col-md-5" type="email" name="email-signup" placeholder="spamMe@internet.com" id="email-input">
+          <input class="col-md-5" type="text" name="email-signup" placeholder="spamMe@internet.com" id="email-input">
           <button class="btn btn-success" type="submit" name="signup-btn" id="signup-btn">Submit</button>
+          <div class="message"></div>
         </form>
     </div>
       <!-- FOOTER -->
       <footer class="col-md-12">
         <div class="footer" id="footer">
-        <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h3>Map</h3>
-                    <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?zoom=15&size=440x380&maptype=roadmap&markers=36.169422,-115.141106&key=AIzaSyDtmnH6A3wXzeodRMsMRqsdumpIAHXRsVw&sensor=false"/>
+                  <h3>Location</h3>
+                  <div id="googleMap" style="width:250px;height:250px;"></div>
+                  <p>1062 Delaware Street
+                  <br>
+                  Denver, CO 80204</p>
+                </div>
+                <div class="col-md-3 sale">
+                  <h3>About</h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                  </p>
+                </div>
+                <div id="saleItems" class="col-md-3">
+                  <h3>Sale</h3>
                 </div>
                 <div class="col-md-3">
-                    <h3>Some Cool Shit</h3>
-                    <ul>
-                        <li> <a href="#">Boom</a> </li>
-                        <li> <a href="#">Pow</a> </li>
-                        <li> <a href="#">Cha-Ching</a> </li>
-                        <li> <a href="#">Ca-Caw</a> </li>
-                    </ul>
+                  <h3>Connect</h3>
+                  <ul>
+                      <li class="icon"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-pinterest-p fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></li>
+                      <li class="icon"><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></li>
+                  </ul>
+                  <h3>Contact</h3>
+                  <ul>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i>Phone: (000) 000.0000</li>
+                    <li><i class="fa fa-envelope" aria-hidden="true"></i>Email: xxx@xxx.com</li>
+                  </ul>
                 </div>
-                <div class="col-md-3">
-                    <h3>Lets Do a Link</h3>
-                    <ul>
-                        <li> <a href="#">Some Link</a> </li>
-                    </ul>
-                </div>
-                <div class="col-md-3">
-                    <h3>Some Link</h3>
-                    <ul>
-                        <li> <a href="#">I Like Lamp</a> </li>
-                    </ul>
-                </div>
+          </div>
       </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
